@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FuncLoom, RefacTrail and FlowBlueprint: free Python code tools</title>
+<meta name="description" content="Three free, open-source Python tools that work offline: FuncLoom turns scripts and Jupyter notebooks into functions and packages, RefacTrail lints, formats and refactors, and FlowBlueprint draws architecture diagrams from code.">
+<meta name="keywords" content="python tools, python refactoring, notebook to package, python linter, python formatter, architecture diagram generator, code to flowchart, jupyter, vs code extension">
+<meta name="author" content="Sambit Supriya Dash">
+<meta name="google-site-verification" content="z6RCKOnzZ9fZC-AYXMPnsxymvcfiMzWlnWJh5D--Mg0">
+<link rel="canonical" href="https://samtherocket.github.io/">
+<link rel="icon" type="image/png" href="icons/funcloom.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FuncLoom, RefacTrail and FlowBlueprint: free Python code tools">
+<meta property="og:description" content="Three free, open-source Python tools that work offline: FuncLoom turns scripts and Jupyter notebooks into functions and packages, RefacTrail lints, formats and refactors, and FlowBlueprint draws architecture diagrams from code.">
+<meta property="og:url" content="https://samtherocket.github.io/">
+<meta property="og:image" content="https://samtherocket.github.io/social/family.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "FuncLoom, RefacTrail and FlowBlueprint: free Python code tools", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "SoftwareApplication", "name": "FuncLoom", "description": "Turn long scripts, snippets and Jupyter notebooks into verified functions and a modular package. Your original file is never changed.", "url": "https://samtherocket.github.io/funcloom/", "applicationCategory": "DeveloperApplication", "operatingSystem": "Windows, macOS, Linux", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "SoftwareApplication", "name": "RefacTrail", "description": "Find likely bugs, apply safe fixes, format code and check structure, naming, type hints and docstrings. Ruff-compatible rule codes.", "url": "https://samtherocket.github.io/refactrail/", "applicationCategory": "DeveloperApplication", "operatingSystem": "Windows, macOS, Linux", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "SoftwareApplication", "name": "FlowBlueprint", "description": "Draw a script, notebook or whole project as an architecture diagram (draw.io, SVG, HTML or Mermaid) without running it.", "url": "https://samtherocket.github.io/flowblueprint/", "applicationCategory": "DeveloperApplication", "operatingSystem": "Windows, macOS, Linux", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Sambit Supriya Dash", "url": "https://samtherocket.github.io/", "sameAs": ["https://github.com/SAMtheROCKET", "https://pypi.org/user/samtherocket/"]}</script>
+<style>
+:root{--bg:#fbfbfa;--fg:#1c2128;--muted:#5a6270;--card:#ffffff;
+--line:#e1e4ea;--code:#f2f4f7;--accent:#4f5bd5}
+@media (prefers-color-scheme:dark){:root{--bg:#111418;--fg:#e8eaee;
+--muted:#a3abb8;--card:#181c22;--line:#2a3039;--code:#1f242c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:32px 20px 64px}
+header nav{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;
+color:var(--muted);margin-bottom:40px}
+a{color:var(--accent)}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:0 0 12px;
+letter-spacing:-.01em}
+.lead{font-size:19px;color:var(--muted);max-width:720px;margin:0 0 24px}
+.status{display:inline-block;font-size:13px;border:1px solid var(--line);
+border-radius:999px;padding:2px 12px;color:var(--muted);margin-bottom:20px}
+pre,code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+pre{background:var(--code);border:1px solid var(--line);border-radius:8px;
+padding:14px 16px;overflow-x:auto;margin:0}
+code{font-size:14px}
+.commands{display:grid;gap:10px;margin:28px 0}
+.command{display:grid;gap:4px}
+.command span{color:var(--muted);font-size:14px}
+h2{font-size:24px;margin:48px 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+padding:16px 18px}
+.card h3{margin:0 0 6px;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+figure{margin:32px 0 0;background:#fff;border:1px solid var(--line);
+border-radius:10px;padding:12px;overflow-x:auto}
+figure img{display:block;max-width:100%;height:auto;margin:0 auto}
+figcaption{font-size:13px;color:#5a6270;text-align:center;margin-top:8px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin:8px 0 0}
+footer{margin-top:56px;font-size:14px;color:var(--muted);
+border-top:1px solid var(--line);padding-top:20px}
+.button{display:inline-block;background:var(--accent);color:#fff;
+text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:600;
+margin-right:10px}
+.button.secondary{background:transparent;color:var(--accent);
+border:1px solid var(--accent)}
+
+.tools{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,
+minmax(280px,1fr));margin-top:8px}
+.tool{background:var(--card);border:1px solid var(--line);border-radius:12px;
+padding:20px;display:grid;gap:12px;align-content:start;
+border-top:4px solid var(--tool)}
+.tool header{display:flex;gap:14px;align-items:center}
+.tool img{width:56px;height:56px;flex:none}
+.tool h2{margin:0;font-size:22px}
+.tool .role{color:var(--muted);font-size:14px}
+.tool p{margin:0}
+.tool pre{font-size:13px}
+.links{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:15px}
+.links a{color:var(--tool);font-weight:600}
+</style>
+</head>
+<body>
+<main>
+<span class="status">Free and open source (MIT) &middot; works offline</span>
+<h1>Python tools that structure, clean and explain your code</h1>
+<p class="lead">Three small, standalone tools for scripts, Jupyter notebooks
+and whole projects. No AI model, account or internet connection needed;
+your code is read, never run.</p>
+<div class="tools"><article class="tool" style="--tool:#178a6a"><header><img src="icons/funcloom.png" alt="FuncLoom icon" width="56" height="56"><div><h2>FuncLoom</h2><div class="role">The functionizer</div></div></header><p>Turn long scripts, snippets and Jupyter notebooks into verified functions and a modular package. Your original file is never changed.</p><pre><code>pip install funcloom
+funcloom modularize nb.ipynb --output pkg</code></pre><div class="links"><a href="https://samtherocket.github.io/funcloom/">Website</a><a href="https://github.com/SAMtheROCKET/funcloom">GitHub</a><a href="https://pypi.org/project/funcloom/">PyPI</a><a href="https://marketplace.visualstudio.com/items?itemName=samtherocket.funcloom">VS Code</a></div></article><article class="tool" style="--tool:#b4541c"><header><img src="icons/refactrail.png" alt="RefacTrail icon" width="56" height="56"><div><h2>RefacTrail</h2><div class="role">The refactorizer</div></div></header><p>Find likely bugs, apply safe fixes, format code and check structure, naming, type hints and docstrings. Ruff-compatible rule codes.</p><pre><code>pip install refactrail
+refactrail lint --fix</code></pre><div class="links"><a href="https://samtherocket.github.io/refactrail/">Website</a><a href="https://github.com/SAMtheROCKET/refactrail">GitHub</a><a href="https://pypi.org/project/refactrail/">PyPI</a><a href="https://marketplace.visualstudio.com/items?itemName=samtherocket.refactrail">VS Code</a></div></article><article class="tool" style="--tool:#2f6fdb"><header><img src="icons/flowblueprint.png" alt="FlowBlueprint icon" width="56" height="56"><div><h2>FlowBlueprint</h2><div class="role">The architect</div></div></header><p>Draw a script, notebook or whole project as an architecture diagram (draw.io, SVG, HTML or Mermaid) without running it.</p><pre><code>pip install flowblueprint
+flowblueprint my_project/</code></pre><div class="links"><a href="https://samtherocket.github.io/flowblueprint/">Website</a><a href="https://github.com/SAMtheROCKET/flowblueprint">GitHub</a><a href="https://pypi.org/project/flowblueprint/">PyPI</a><a href="https://marketplace.visualstudio.com/items?itemName=samtherocket.flowblueprint">VS Code</a></div></article></div>
+<h2>Use them together</h2>
+<div class="grid"><div class="card"><h3>1. Structure</h3><p>FuncLoom turns a notebook or a long script into functions and a package.</p></div><div class="card"><h3>2. Clean</h3><p>RefacTrail checks, fixes and formats the result.</p></div><div class="card"><h3>3. Explain</h3><p>FlowBlueprint draws the architecture for your team, managers and new joiners.</p></div></div>
+<h2>Good to know</h2>
+<div class="grid">
+<div class="card"><h3>Older Python projects</h3><p>The tools need Python
+3.12 or newer, your project does not: run them on their own Python while
+your code stays on 3.8&ndash;3.11. <a href="https://github.com/SAMtheROCKET/funcloom/blob/main/docs/OLDER_PYTHON.md">Step-by-step guide</a>.</p></div>
+<div class="card"><h3>In VS Code</h3><p>Each tool has a VS Code extension:
+search <em>FuncLoom</em>, <em>RefacTrail</em> or <em>FlowBlueprint</em> in the
+Extensions view.</p></div>
+<div class="card"><h3>Safe by design</h3><p>Every change is checked before
+it is written, or refused with a reason and a line number. Original files
+are never changed unless you ask for it.</p></div>
+</div>
+<footer>Made by Sambit Supriya Dash. <a href="https://github.com/SAMtheROCKET">GitHub</a>
+&middot; <a href="https://pypi.org/user/samtherocket/">PyPI</a>
+&middot; <a href="https://marketplace.visualstudio.com/publishers/samtherocket">VS Code Marketplace</a></footer>
+</main>
+</body>
+</html>

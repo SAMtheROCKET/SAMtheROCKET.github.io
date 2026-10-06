@@ -1,0 +1,30 @@
+# Python tools by Sambit Supriya Dash
+
+> Three free, open-source Python tools that work offline: FuncLoom turns scripts and Jupyter notebooks into functions and packages, RefacTrail lints, formats and refactors, and FlowBlueprint draws architecture diagrams from code.
+
+## FuncLoom (the functionizer)
+
+Turn long scripts, snippets and Jupyter notebooks into verified functions and a modular package. Your original file is never changed.
+
+- Website: https://samtherocket.github.io/funcloom/
+- Source: https://github.com/SAMtheROCKET/funcloom
+- Install: pip install funcloom
+- Example: funcloom modularize nb.ipynb --output pkg
+
+## RefacTrail (the refactorizer)
+
+Find likely bugs, apply safe fixes, format code and check structure, naming, type hints and docstrings. Ruff-compatible rule codes.
+
+- Website: https://samtherocket.github.io/refactrail/
+- Source: https://github.com/SAMtheROCKET/refactrail
+- Install: pip install refactrail
+- Example: refactrail lint --fix
+
+## FlowBlueprint (the architect)
+
+Draw a script, notebook or whole project as an architecture diagram (draw.io, SVG, HTML or Mermaid) without running it.
+
+- Website: https://samtherocket.github.io/flowblueprint/
+- Source: https://github.com/SAMtheROCKET/flowblueprint
+- Install: pip install flowblueprint
+- Example: flowblueprint my_project/
